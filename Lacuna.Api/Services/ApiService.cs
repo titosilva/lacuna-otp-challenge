@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using Lacuna.Api.Utils;
 using Lacuna.Domain.Entities;
@@ -16,6 +17,27 @@ namespace Lacuna.Api.Services
         private async Task<Dictionary<string, string>> PostAsync(string endpoint, object data = null)
         {
             var response = await _httpClient.PostAsync(endpoint, data!=null? HttpJsonUtils.GenerateContent(data) : null);
+
+            if(response.IsSuccessStatusCode)
+            {
+                var json = await response.Content.ReadAsStringAsync();
+                var content = HttpJsonUtils.DeserializeToDict(json);
+
+                if(content["status"]=="Success")
+                    return content;
+
+                return null;
+            }
+
+            return null;
+        }
+
+        private async Task<Dictionary<string, string>> GetAsync(string endpoint, string token)
+        {
+            if(!string.IsNullOrEmpty(token))
+                _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+            
+            var response = await _httpClient.GetAsync(endpoint);
 
             if(response.IsSuccessStatusCode)
             {
@@ -56,6 +78,17 @@ namespace Lacuna.Api.Services
             }).Result;
 
             return result==null? null : new Token(result["token"]);
+        }
+
+        public string GetSecret(Token token)
+        {
+            var result = GetAsync(_settings.GetValue<string>("Secret"), token.ToString()).Result;
+
+            if(result==null)
+                return null;
+
+            else
+                return result["secret"];
         }
     }
 }

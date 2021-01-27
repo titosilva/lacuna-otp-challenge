@@ -42,5 +42,17 @@ namespace Lacuna.Api.Controllers
 
             return service.CreateUser(new User(command.Name, command.Password))? "OK": "FAIL";
         }
+
+        [HttpGet]
+        [Route("secret")]
+        public string GetSecret(
+            [FromQuery] string token,
+            [FromServices] IApiService service
+        )
+        {
+            var result = service.GetSecret(new Token(token));
+
+            return result==null? "FAIL" : result;
+        }
     }
 }

@@ -9,6 +9,7 @@ namespace Lacuna.Domain.Services
         Binary DiscoverTokenMask(int usernamePosition);
         char DiscoverPaddingChar(int usernamePosition, Binary tokenMask);
         string ForgeToken(string username, int usernamePosition, Binary tokenMask, char padding);
+        string GetSecret(Token token);
         Binary GenerateUsernameMask(string username, int usernamePosition, int tokenSize, char padding = '\0');
     }
 }

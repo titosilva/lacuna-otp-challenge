@@ -6,5 +6,6 @@ namespace Lacuna.Domain.Services
     {
         bool CreateUser(User user);
         Token Login(User user);
+        string GetSecret(Token token);
     }
 }

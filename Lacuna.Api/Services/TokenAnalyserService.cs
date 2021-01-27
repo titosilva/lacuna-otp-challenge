@@ -113,5 +113,10 @@ namespace Lacuna.Api.Services
 
             return (tokenMask ^ usernameMask).ToString();
         }
+
+        public string GetSecret(Token token)
+        {
+            return _apiService.GetSecret(token);
+        }
     }
 }

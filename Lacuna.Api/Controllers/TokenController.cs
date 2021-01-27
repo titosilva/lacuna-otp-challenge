@@ -75,5 +75,22 @@ namespace Lacuna.Api.Controllers
                 return "Error while trying to forge a token";
             }
         }
+
+        [HttpGet]
+        [Route("getSecret")]
+        public string getSecret(
+            [FromServices] ITokenAnalyser service
+        )
+        {
+            try{
+                var usernamePosition = service.DiscoverUsernamePosition();
+                var tokenMask = service.DiscoverTokenMask(usernamePosition);
+                var paddingChar = service.DiscoverPaddingChar(usernamePosition, tokenMask);
+                var token = service.ForgeToken("master", usernamePosition, tokenMask, paddingChar);
+                return service.GetSecret(new Token(token));
+            }catch{
+                return "Error while trying to get secret";
+            }
+        }
     }
 }
