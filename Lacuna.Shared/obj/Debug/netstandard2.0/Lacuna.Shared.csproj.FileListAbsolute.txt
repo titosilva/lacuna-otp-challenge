@@ -1,0 +1,9 @@
+/home/ratchet/Documents/prog/lacuna/Lacuna.Shared/obj/Debug/netstandard2.0/Lacuna.Shared.csprojAssemblyReference.cache
+/home/ratchet/Documents/prog/lacuna/Lacuna.Shared/obj/Debug/netstandard2.0/Lacuna.Shared.AssemblyInfoInputs.cache
+/home/ratchet/Documents/prog/lacuna/Lacuna.Shared/obj/Debug/netstandard2.0/Lacuna.Shared.AssemblyInfo.cs
+/home/ratchet/Documents/prog/lacuna/Lacuna.Shared/obj/Debug/netstandard2.0/Lacuna.Shared.csproj.CoreCompileInputs.cache
+/home/ratchet/Documents/prog/lacuna/Lacuna.Shared/bin/Debug/netstandard2.0/Lacuna.Shared.deps.json
+/home/ratchet/Documents/prog/lacuna/Lacuna.Shared/bin/Debug/netstandard2.0/Lacuna.Shared.dll
+/home/ratchet/Documents/prog/lacuna/Lacuna.Shared/bin/Debug/netstandard2.0/Lacuna.Shared.pdb
+/home/ratchet/Documents/prog/lacuna/Lacuna.Shared/obj/Debug/netstandard2.0/Lacuna.Shared.dll
+/home/ratchet/Documents/prog/lacuna/Lacuna.Shared/obj/Debug/netstandard2.0/Lacuna.Shared.pdb

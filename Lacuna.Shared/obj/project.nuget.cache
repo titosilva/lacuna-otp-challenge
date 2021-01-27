@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "m1SBAyQU+bKQYQUxZNP7amDYetTag8+ByOgtEtXW6dFIzRlkJohegeC/pD3ggtI4vTwJ65dpdP+DnEJm5yQXFw==",
+  "success": true,
+  "projectFilePath": "/home/ratchet/Documents/prog/lacuna/Lacuna.Shared/Lacuna.Shared.csproj",
+  "expectedPackageFiles": [
+    "/home/ratchet/.nuget/packages/microsoft.netcore.platforms/1.1.0/microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "/home/ratchet/.nuget/packages/netstandard.library/2.0.3/netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
